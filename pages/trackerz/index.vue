@@ -30,7 +30,7 @@ export default {
       let resultContainer = document.getElementById('resultContainer');
       let query = searchInput.value;
       let apiKey = '26ece191ecec87678d1843a42fa38a06'; // Replace with your own API key
-      let response = await fetch(`http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`);
+      let response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`);
       let data = await response.json();
       console.log(data);
       this.artists = data.similarartists.artist;
