@@ -5,9 +5,14 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "jest"
+    "test": "jest",
+    "deploy": "nuxt generate && gh-pages -d dist",
+    "predeploy": "rm -rf dist"
   },
   "dependencies": {
     "nuxt": "^3.2.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
