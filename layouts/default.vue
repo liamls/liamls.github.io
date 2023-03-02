@@ -3,7 +3,7 @@
     <header>
       <nav class="navbar">
         <div class="home">
-          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink to="/">Liam.</NuxtLink>
         </div>
         <div class="menu">
           <NuxtLink to="/trackerz">Trackerz</NuxtLink>
@@ -21,22 +21,42 @@
 </template>
 
 <style>
+@font-face {
+  font-family: "Montserrat";
+  src: local("Monsterrat"),
+    url(../assets/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
 body {
-  background-image: url('../public/assets/background.jpg');
-  height: 100%;
+  background-image: url('../assets/background.jpg');
   margin: 0;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 'Lato', sans-serif;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 html {
   height: 100%;
+  font-family: "Montserrat";
 }
 
 header {
-  height: 6vh;
-  margin: 3vw;
+  height: 2vh;
+  margin: 2vw;
 }
 
 .navbar {
@@ -45,22 +65,19 @@ header {
   justify-content: space-between;
   align-items: center;
   font-size: 25px;
-  font-weight: 700;
-  background: rgba(255, 255, 255, 0.22);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
   height: 100%;
   padding-left: 2vw;
   padding-right: 2vw;
-  border-radius: 20px;
 }
 
 .navbar a {
   margin-top: 1vh;
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+.navbar a:hover {
+  font-weight: 600;
 }
 
 .menu a {
@@ -73,15 +90,7 @@ header {
 }
 
 .bodycontainer {
-  margin: 3vw;
-}
-.window{
-  padding: 1vh;
-  background: rgba(255, 255, 255, 0.22);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(7.5px);
-  -webkit-backdrop-filter: blur(7.5px);
+  margin: 2vw;
 }
 
 </style>

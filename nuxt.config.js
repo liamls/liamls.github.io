@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
     app: {
+        pageTransition: { name: 'page', mode: 'out-in' },
         head: {
             title: 'Portfolio - Liam',
             meta: [

@@ -1,15 +1,26 @@
 <template>
-  <div class="window">
-    <h1>Bienvenue sur Trackers</h1>
-    <h2>Tu vas pouvoir trouver des artistes similaires à tes goûts</h2>
-    <form id="searchForm">
-      <label for="searchInput">Entre un nom d'artiste :</label>
-      <input type="text" id="searchInput" required>
-      <button @click.prevent='searchArtists'>Go</button>
-    </form>
-    <div v-if="artists!==[]">
-      <div v-for="artist in artists" :key="artist.name" class="result-item">
-        <h3>{{ artist.name }}</h3>
+  <div class="container">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-controls">
+          <button aria-label="Close"></button>
+          <button aria-label="Minimize"></button>
+          <button aria-label="Zoom"></button>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Bienvenue sur Trackers</h1>
+        <p>Trackers est un site qui vous permet de rechercher des artistes similaires à ceux que vous aimez.</p>
+        <form id="searchForm">
+          <label for="searchInput">Entre un nom d'artiste :</label>
+          <input type="text" id="searchInput" required>
+          <button @click.prevent='searchArtists'>Go</button>
+        </form>
+        <div v-if="artists !== []">
+          <div v-for="artist in artists" :key="artist.name" class="result-item">
+            <h3>{{ artist.name }}</h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -34,6 +45,9 @@ export default {
       let data = await response.json();
       console.log(data);
       this.artists = data.similarartists.artist;
+      if(this.artists.length >= 5){
+        this.artists = this.artists.slice(0, 5);
+      }
       return this.artists;
     }
   }
@@ -41,6 +55,12 @@ export default {
 </script>
 
 <style scoped>
+.container{
+  margin-top: 5vh;
+}
+.window{
+  margin: 0;
+}
 form {
   margin: 20px 0;
 }
@@ -56,18 +76,22 @@ input[type="text"] {
   border-radius: 4px;
   width: 300px;
   font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.396);
 }
 
-button[type="submit"] {
+#searchForm button {
   padding: 5px 10px;
-  background-color: #1db954;
+  background-color:black;
+  opacity: 60%;
   color: #fff;
   border: none;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
 }
-
+#searchForm button:hover {
+  opacity: 80%;
+}
 .result-item {
   margin: 10px 0;
   padding: 10px;
