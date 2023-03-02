@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
     <title>Trackerz</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js"></script>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
         form {
             margin: 20px 0;
         }
-
         label {
             display: block;
             margin-bottom: 5px;
@@ -60,45 +59,60 @@
     </style>
 </head>
 <body>
-<h1>Bienvenue sur Trackers</h1>
-<h2>Tu vas pouvoir trouver des artistes similaires à tes goûts</h2>
-<form id="searchForm">
-    <label for="searchInput">Entre un nom d'artiste :</label>
-    <input type="text" id="searchInput" required>
-    <button type="submit">Go</button>
-</form>
-<div id="resultContainer"></div>
-<script>
-    function searchSimilarArtists(event) {
-        event.preventDefault();
-        const searchInput = document.getElementById('searchInput');
-        const resultContainer = document.getElementById('resultContainer');
-        const query = searchInput.value;
-        const apiKey = '26ece191ecec87678d1843a42fa38a06'; // Replace with your own API key
+    <header>
+        <nav class="navbar">
+            <div class="home">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="menu">
+                <a href="trackerz.html">Trackerz</a>
+                <a href="umami.html">Umami</a>
+            </div>
+            <div class="about">
+                <a href="about.html">Contact</a>
+            </div>
+        </nav>
+</header>
+    <div class="bodycontainer">
+        <h1>Bienvenue sur Trackers</h1>
+        <h2>Tu vas pouvoir trouver des artistes similaires à tes goûts</h2>
+        <form id="searchForm">
+            <label for="searchInput">Entre un nom d'artiste :</label>
+            <input type="text" id="searchInput" required>
+            <button type="submit">Go</button>
+        </form>
+        <div id="resultContainer"></div>
+        <script>
+            function searchSimilarArtists(event) {
+                event.preventDefault();
+                const searchInput = document.getElementById('searchInput');
+                const resultContainer = document.getElementById('resultContainer');
+                const query = searchInput.value;
+                const apiKey = '26ece191ecec87678d1843a42fa38a06'; // Replace with your own API key
 
-        $.ajax({
-            url: `http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`,
-            type: 'GET',
-            success: function (response) {
-                resultContainer.innerHTML = '';
-                const similarArtists = response.similarartists.artist;
-                similarArtists.forEach(function(artist) {
-                    const artistItem = document.createElement('div');
-                    artistItem.classList.add('result-item');
-                    artistItem.innerHTML = `
-							<img src="${artist.image[2]['#text']}">
-							<h3>${artist.name}</h3>
-						`;
-                    resultContainer.appendChild(artistItem);
+                $.ajax({
+                    url: `http://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`,
+                    type: 'GET',
+                    success: function (response) {
+                        resultContainer.innerHTML = '';
+                        const similarArtists = response.similarartists.artist;
+                        similarArtists.forEach(function (artist) {
+                            const artistItem = document.createElement('div');
+                            artistItem.classList.add('result-item');
+                            artistItem.innerHTML = `
+                                <img src="${artist.image[2]['#text']}">
+                                <h3>${artist.name}</h3>
+                            `;
+                            resultContainer.appendChild(artistItem);
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.log('Error:', error);
+                    }
                 });
-            },
-            error: function (xhr, status, error) {
-                console.log('Error:', error);
             }
-        });
-    }
-
-    $('#searchForm').submit(searchSimilarArtists);
-</script>
+            $('#searchForm').submit(searchSimilarArtists);
+        </script>
+    </div>
 </body>
 </html>
