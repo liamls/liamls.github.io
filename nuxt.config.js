@@ -11,7 +11,7 @@ export default defineNuxtConfig({
                 {name: 'description', content: 'My portfolio website'}
             ],
             link: [
-                {rel: 'icon', type: 'image/x-icon', href: '../assets/gluten-free.png'}
+                {rel: 'icon', type: 'image/x-icon', href: '/assets/gluten-free.png'}
             ]
         }
     }
