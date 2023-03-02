@@ -7,7 +7,7 @@
         </div>
         <div class="menu">
           <NuxtLink to="/trackerz">Trackerz</NuxtLink>
-          <NuxtLink to="/umami">Umami</NuxtLink>
+          <NuxtLink hidden to="/umami">Umami</NuxtLink>
         </div>
         <div class="contact">
           <NuxtLink to="/contact">Contact</NuxtLink>
@@ -93,4 +93,25 @@ header {
   margin: 2vw;
 }
 
+body.transition {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+body.transition-active {
+  transition: all 0.6s;
+  opacity: 1;
+  filter: none;
+}
 </style>
+
+<script>
+export default {
+  mounted() {
+    document.body.classList.add("transition");
+    setTimeout(() => {
+      document.body.classList.add("transition-active");
+    }, 0);
+  },
+};
+</script>

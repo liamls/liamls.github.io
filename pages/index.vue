@@ -1,24 +1,41 @@
 <template>
   <div class="container">
-    <div class="avatar">
-      <img src="../assets/avatar.png" alt="avatar" />
-    </div>
-    <div class="window">
-      <div class="title-bar">
-        <div class="title-bar-controls">
-          <button aria-label="Close"></button>
-          <button aria-label="Minimize"></button>
-          <button aria-label="Zoom"></button>
+    <div class="banner">
+      <div class="avatar">
+        <img src="../assets/avatar.png" alt="avatar" />
+      </div>
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+            <button aria-label="Minimize"></button>
+            <button aria-label="Zoom"></button>
+          </div>
         </div>
-      </div>
-      <div class="content">
-        <p class="title">Bienvenue sur mon portfolio.</p>
-        <p>Je m'appelle Liam Le Strat et je suis un développeur full-stack.</p>
-        <p>Vous pourrez ici trouver certains de mes projets. N'hésitez pas à me contacter.</p>
+        <div class="content">
+          <p class="title">Bienvenue sur mon portfolio.</p>
+          <p>Je m'appelle Liam Le Strat et je suis un développeur full-stack.</p>
+          <p>Vous pourrez ici trouver certains de mes projets. N'hésitez pas à me contacter.</p>
+        </div>
+        <button @click="display = !display" class="legend">En savoir plus</button>
       </div>
     </div>
-    <div class="resume">
-
+    <div v-show="display" class="adds">
+      <div class="window">
+        <div class="content2" v-if="itemAdds === 1">
+          <p class="title">Parcours</p>
+          <p>Je suis en dernière année de cycle ingénieur à IMT Nord Europe, j'ai effectué tout mon cursus en
+            apprentissage avec Orange à Saint-Malo en tant que technicien d'intervention ou Orange Business Services à
+            Rennes en tant que développeur.</p>
+        </div>
+        <div class="content2" v-else-if="itemAdds === 2">
+          <p class="title">Métier</p>
+          <p>Je travaille sur le projet IoT M2M Malima, composé d'environ 80 personnes dont la moitié en Roumanie. J'ai
+            travaillé au sein de l'équipe gérant les composants back-end France, mais j'ai récemment changé d'équipe
+            dans le cadre de mon projet de fin d'études : la refonte d'une application Orange from scratch.</p>
+        </div>
+        <button @click="nextAdds" class="legend">Suivant</button>
+      </div>
     </div>
   </div>
 </template>
@@ -26,21 +43,41 @@
 <style>
 .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   color: white;
   margin-top: 20vh;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.adds {
+  bottom: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+.adds .window {
+  margin-top: 5vh;
+  width: 40vw;
 }
 .content {
   padding-top: 2vh;
 }
-.avatar img{
+.content2 {
+  padding-top: 0;
+  transition: all 0.2s;
+}
+.avatar img {
   transform: translateX(+6vw);
-  transition: all 0.1s;
 }
-.avatar img:hover{
-  transition: all 0.1s;
-  transform: translateX(+9vw);
-}
+
 .window {
   display: flex;
   flex-direction: column;
@@ -56,12 +93,15 @@
   height: 100%;
   width: 30vw;
 }
-.title{
+
+.title {
   font-weight: 600;
 }
-.window:hover{
+
+.window:hover {
   background: rgba(255, 255, 255, 0.15);
 }
+
 .title-bar {
   position: absolute;
   top: 0;
@@ -89,10 +129,12 @@
   margin-top: 10px;
   opacity: 75%;
 }
+
 .title-bar-controls button:hover {
   cursor: pointer;
   opacity: 100%;
 }
+
 .title-bar-controls button:nth-child(1) {
   background-color: #f94339;
 }
@@ -105,4 +147,31 @@
   background-color: #16c430;
 }
 
+.legend {
+  color: rgb(166, 165, 165);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
 </style>
+
+<script>
+export default {
+  name: 'Index',
+  data() {
+    return {
+      display: false,
+      itemAdds: 1
+    }
+  },
+  methods: {
+    nextAdds() {
+      if (this.itemAdds === 2) {
+        this.itemAdds = 1
+      } else {
+        this.itemAdds++
+      }
+    }
+  }
+}
+</script>

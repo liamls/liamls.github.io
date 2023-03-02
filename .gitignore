@@ -17,3 +17,4 @@ node_modules
 dist
 .idea
 .package-lock.json
+pages/index.vue

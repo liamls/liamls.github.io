@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <div class="window">
+    <div class="banner">
+      <div class="window">
       <div class="title-bar">
         <div class="title-bar-controls">
           <button aria-label="Close"></button>
@@ -9,8 +10,8 @@
         </div>
       </div>
       <div class="content">
-        <h1>Bienvenue sur Trackers</h1>
-        <p>Trackers est un site qui vous permet de rechercher des artistes similaires à ceux que vous aimez.</p>
+        <h1>Bienvenue sur Trackerz</h1>
+        <p>Trackerz est un outil qui vous permet de rechercher des artistes similaires à ceux que vous aimez.</p>
         <form id="searchForm">
           <label for="searchInput">Entre un nom d'artiste :</label>
           <input type="text" id="searchInput" required>
@@ -22,6 +23,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
