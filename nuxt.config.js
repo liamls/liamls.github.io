@@ -1,4 +1,8 @@
 export default defineNuxtConfig({
+    mode: 'spa',
+    router: {
+    base: '/liamls.github.io/'
+  },
     app: {
         pageTransition: { name: 'page', mode: 'out-in' },
         head: {
@@ -7,7 +11,7 @@ export default defineNuxtConfig({
                 {name: 'description', content: 'My portfolio website'}
             ],
             link: [
-                {rel: 'icon', type: 'image/x-icon', href: '/icons/favicon.ico'}
+                {rel: 'icon', type: 'image/x-icon', href: '../assets/gluten-free.png'}
             ]
         }
     }
