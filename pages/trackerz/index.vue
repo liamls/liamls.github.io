@@ -1,5 +1,5 @@
 <template>
-  <div class="bodycontainer">
+  <div class="window">
     <h1>Bienvenue sur Trackers</h1>
     <h2>Tu vas pouvoir trouver des artistes similaires à tes goûts</h2>
     <form id="searchForm">
