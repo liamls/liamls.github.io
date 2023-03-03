@@ -244,7 +244,7 @@ body.transition-active {
     display: none;
   }
   body{
-    background-size: contain;
+    background-size: auto 120%;
   }
 }
 </style>
