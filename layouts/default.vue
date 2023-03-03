@@ -243,6 +243,9 @@ body.transition-active {
   .title-bar-controls {
     display: none;
   }
+  body{
+    background-size: 100vh;
+  }
 }
 </style>
 
