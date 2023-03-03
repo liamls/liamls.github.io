@@ -21,11 +21,9 @@
         </div>
       </div>
     </div>
-    <div class="result">
-      <div v-if="artists !== []">
-        <div v-for="artist in artists" :key="artist.name" class="result-item">
-          <h3>{{ artist.name }}</h3>
-        </div>
+    <div class="result" v-if="artists !== []">
+      <div v-for="artist in artists" :key="artist.name" class="result-item">
+        <h3>{{ artist.name }}</h3>
       </div>
     </div>
   </div>
@@ -63,16 +61,20 @@ export default {
 .container {
   margin-top: 5vh;
   flex-direction: column;
+  align-items: center;
 }
+
 .result {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   margin-top: 5vh;
+}
+.result-item{
+  background-color: rgba(255, 255, 255, 0.396);
 }
 .window {
   margin: 0;
-  height: 30vh;
+  height: 100%;
 }
 
 form {
