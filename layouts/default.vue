@@ -240,6 +240,9 @@ body.transition-active {
     width: 90vw;
     margin-left: 0;
   }
+  .title-bar-controls {
+    display: none;
+  }
 }
 </style>
 
