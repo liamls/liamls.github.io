@@ -135,4 +135,16 @@ input[type="text"] {
   font-size: 18px;
   margin: 0;
 }
+@media only screen and (max-width: 480px) {
+  .window {
+    margin-top: 10vh;
+    width: 90vw;
+    margin-left: 0;
+    font-size: 15px;
+    padding: 2vw;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}
 </style>
