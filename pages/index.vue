@@ -21,22 +21,19 @@
           <div class="content" v-else-if="itemAdds === 1">
             <p class="title">Parcours</p>
             <p>Je suis en dernière année de cycle ingénieur à IMT Nord Europe, j'ai effectué tout mon cursus en
-              apprentissage avec Orange à Saint-Malo en tant que technicien d'intervention ou Orange Business Services à
-              Rennes en tant que développeur.</p>
+              apprentissage. <br/><br/>Avec Orange à Saint-Malo en tant que technicien d'intervention pendant mon IUT puis chez Orange Business Services à
+              Rennes en tant que développeur durant ma formation d'ingénieur.</p>
           </div>
           <div class="content" v-else-if="itemAdds === 2">
             <p class="title">Métier</p>
-            <p>Je travaille sur le projet IoT M2M Malima, composé d'environ 80 personnes dont la moitié en Roumanie.
-              J'ai
-              travaillé au sein de l'équipe gérant les composants back-end France, mais j'ai récemment changé d'équipe
-              dans le cadre de mon projet de fin d'études : la refonte d'une application Orange from scratch (front,
-              back
-              et CI/CD).</p>
+            <p>Je travaille sur le projet IoT M2M Malima : projet avec environ 80 personnes dont la moitié en Roumanie.<br/><br/>
+              J'ai travaillé au sein du groupe gérant les composants back-end France. <br/> Dans le cadre de mon projet de fin d'études j'ai rejoint l'équipe Smartsim
+              afin d'effectuer la refonte d'une application Orange from scratch (front, back et CI/CD).</p>
           </div>
           <div class="content" v-else-if="itemAdds === 3">
             <p class="title">Projet</p>
             <p>Sur ce site, vous pourrez trouver certains de mes projets personnels, développés durant mon temps
-              libre.<br/><b>Trackerz</b> est un outil qui vous permet de rechercher des artistes similaires à ceux que
+              libre.<br/><br/>Passionné de musique, j'ai développé <b><a href="/trackerz">Trackerz</a></b> : un outil permettant de rechercher des artistes similaires à ceux que
               vous aimez.</p>
           </div>
         </transition>

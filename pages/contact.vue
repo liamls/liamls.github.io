@@ -9,9 +9,10 @@
         </div>
       </div>
       <div class="content">
-        <p>Mail : lestratliam@gmail.com</p>
-        <p>Github : @liamls</p>
-        <p>Linkedin : Liam Le Strat</p>
+        <p><b>Mail</b> : <a href="mailto:pro-liamls@proton.me">pro-liamls@proton.me</a></p>
+        <p><b>Github</b> : <a href="https://github.com/liamls">@liamls</a></p>
+        <p><b>Linkedin</b> : <a href="https://www.linkedin.com/in/liam-le-strat/">Liam Le Strat</a></p>
+        <span/>
       </div>
     </div>
   </div>

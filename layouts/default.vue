@@ -120,10 +120,12 @@ body.transition-active {
 
 .content {
   padding-top: 2vh;
-  height: 100%;
   overflow: auto;
 }
-
+.content a{
+  color: white;
+  text-decoration: none;
+}
 .avatar img {
   transform: translateX(+6vw);
 }
@@ -142,7 +144,6 @@ body.transition-active {
   margin-top: 10vh;
   padding-bottom: 0;
   width: 30vw;
-  height: 30vh;
 }
 
 .title {
