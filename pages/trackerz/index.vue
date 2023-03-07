@@ -34,24 +34,31 @@ export default {
   name: 'Trackerz',
   data() {
     return {
-      artists: []
+      artists: [],
+      data : []
     }
   },
   methods: {
     async searchArtists() {
       this.artists = [];
+      this.artistName = [];
+      this.artistData = [];
       let searchInput = document.getElementById('searchInput');
       let resultContainer = document.getElementById('resultContainer');
       let query = searchInput.value;
-      let apiKey = '26ece191ecec87678d1843a42fa38a06'; // Replace with your own API key
+      let apiKey = '26ece191ecec87678d1843a42fa38a06';
       let response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`);
       let data = await response.json();
-      console.log(data);
       this.artists = data.similarartists.artist;
       if (this.artists.length >= 5) {
         this.artists = this.artists.slice(0, 5);
       }
-      return this.artists;
+      for (const artist of this.artists) {
+        this.artistName.push(artist.name);
+        let response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artist.name}&api_key=${apiKey}&format=json`);
+        this.data.push(await response.json());
+      }
+      console.log(this.data);
     }
   }
 }
@@ -69,9 +76,11 @@ export default {
   justify-content: center;
   margin-top: 5vh;
 }
-.result-item{
+
+.result-item {
   background-color: rgba(255, 255, 255, 0.396);
 }
+
 .window {
   margin: 0;
   height: 100%;
@@ -135,6 +144,7 @@ input[type="text"] {
   font-size: 18px;
   margin: 0;
 }
+
 @media only screen and (max-width: 480px) {
   .window {
     margin-top: 10vh;
@@ -143,6 +153,7 @@ input[type="text"] {
     font-size: 15px;
     padding: 2vw;
   }
+
   h1 {
     font-size: 18px;
   }
