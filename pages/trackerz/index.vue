@@ -23,7 +23,7 @@
     </div>
     <div class="result" v-if="artists !== []">
       <div v-for="artist in artists" :key="artist.name" class="result-item">
-        <h3>{{ artist.name }}</h3>
+        <a :href="artist.url" target="_blank" rel="noopener noreferrer">{{ artist.name }}</a>
       </div>
     </div>
   </div>
@@ -34,8 +34,7 @@ export default {
   name: 'Trackerz',
   data() {
     return {
-      artists: [],
-      data : []
+      artists: []
     }
   },
   methods: {
@@ -53,12 +52,7 @@ export default {
       if (this.artists.length >= 5) {
         this.artists = this.artists.slice(0, 5);
       }
-      for (const artist of this.artists) {
-        this.artistName.push(artist.name);
-        let response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artist.name}&api_key=${apiKey}&format=json`);
-        this.data.push(await response.json());
-      }
-      console.log(this.data);
+      console.log(this.artists);
     }
   }
 }
@@ -73,14 +67,16 @@ export default {
 
 .result {
   display: flex;
-  justify-content: center;
   margin-top: 5vh;
 }
 
 .result-item {
   background-color: rgba(255, 255, 255, 0.396);
 }
-
+.result-item a{
+  color: white;
+  text-decoration: none;
+}
 .window {
   margin: 0;
   height: 100%;
