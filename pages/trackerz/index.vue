@@ -39,20 +39,26 @@ export default {
   },
   methods: {
     async searchArtists() {
-      this.artists = [];
-      this.artistName = [];
-      this.artistData = [];
-      let searchInput = document.getElementById('searchInput');
-      let resultContainer = document.getElementById('resultContainer');
-      let query = searchInput.value;
-      let apiKey = '26ece191ecec87678d1843a42fa38a06';
-      let response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`);
-      let data = await response.json();
-      this.artists = data.similarartists.artist;
-      if (this.artists.length >= 5) {
-        this.artists = this.artists.slice(0, 5);
+      try{
+        this.artists = [];
+        this.artistName = [];
+        this.artistData = [];
+        let searchInput = document.getElementById('searchInput');
+        let resultContainer = document.getElementById('resultContainer');
+        let query = searchInput.value;
+        let apiKey = '26ece191ecec87678d1843a42fa38a06';
+        let response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`);
+        let data = await response.json();
+        console.log(data)
+        this.artists = data.similarartists.artist;
+        if (this.artists.length >= 5) {
+          this.artists = this.artists.slice(0, 5);
+        }
+        console.log(this.artists);
       }
-      console.log(this.artists);
+      catch (error) {
+        alert("Erreur lors de la recherche d'artiste -- "+ error);
+      }
     }
   }
 }

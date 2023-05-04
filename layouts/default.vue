@@ -6,8 +6,9 @@
           <NuxtLink to="/">Liam.</NuxtLink>
         </div>
         <div class="menu">
+          <NuxtLink to="/parcours">Parcours</NuxtLink>
+          <NuxtLink to="/competences">Compétences</NuxtLink>
           <NuxtLink to="/trackerz">Trackerz</NuxtLink>
-          <NuxtLink hidden to="/umami">Umami</NuxtLink>
         </div>
         <div class="contact">
           <NuxtLink to="/contact">Contact</NuxtLink>

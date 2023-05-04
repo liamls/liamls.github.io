@@ -1,18 +1,24 @@
 <template>
   <div class="container">
-    <div class="window">
-      <div class="title-bar">
-        <div class="title-bar-controls">
-          <button aria-label="Close"></button>
-          <button aria-label="Minimize"></button>
-          <button aria-label="Zoom"></button>
-        </div>
+    <div class="banner">
+      <div class="avatar">
+        <img src="../assets/avatar_cross.png" alt="avatar"/>
       </div>
-      <div class="content">
-        <p><b>Mail</b> : <a href="mailto:pro-liamls@proton.me">pro-liamls@proton.me</a></p>
-        <p><b>Github</b> : <a href="https://github.com/liamls">@liamls</a></p>
-        <p><b>Linkedin</b> : <a href="https://www.linkedin.com/in/liam-le-strat/">Liam Le Strat</a></p>
-        <span/>
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+            <button aria-label="Minimize"></button>
+            <button aria-label="Zoom"></button>
+          </div>
+        </div>
+        <div class="content">
+          <p class="title">N'hésitez pas à me contacter !</p>
+          <p><b>Mail</b> : <a href="mailto:pro-liamls@proton.me">pro-liamls@proton.me</a></p>
+          <p><b>Github</b> : <a href="https://github.com/liamls">@liamls</a></p>
+          <p><b>Linkedin</b> : <a href="https://www.linkedin.com/in/liam-le-strat/">Liam Le Strat</a></p>
+          <span/>
+        </div>
       </div>
     </div>
   </div>
