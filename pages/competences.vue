@@ -20,9 +20,9 @@
           <div class="content" v-else-if="itemAdds === 1">
             <p class="title">Back-end</p>
             <p>
-              Du côté back-end, j'ai beaucoup travaillé avec Java et Spring. Que ce soit sur des projets existants, ou alors des projets from scratch.
+              Du côté back-end, j'ai beaucoup travaillé avec Java et Spring. Que ce soit sur des projets existants ou from scratch.
               <br/><br/>
-              Dans le cadre de mon projet de fin d'études, j'ai par exemple développé une API Rest communiquant avec une base de données MySQL. J'ai utilisé de nombreuses librairies utiles tels quel Spring Security pour la gestion de token JWT.
+              Dans le cadre de mon projet de fin d'études, j'ai par exemple développé une API Rest communiquant avec une base de données MySQL. J'ai utilisé de nombreuses librairies utiles tel que Spring Security pour la gestion de token JWT.
             </p>
           </div>
           <div class="content" v-else-if="itemAdds === 2">
@@ -30,7 +30,7 @@
             <p>
               En front-end, j'ai appris à développer initialement des sites web en HTML/CSS/JS. Puis, dans le cadre de projets, j'ai ensuite appris à utiliser des frameworks tels que Vue & Nuxt ou encore React.
               <br/><br/>
-              J'ai également certaines notions en UX/UI ayant appris à utiliser Figma, un outil permettant de créer des maquettes dynamiques de site.</p>
+              J'ai également appréhendé certaines notions en UX/UI en utilisant Figma, un outil permettant de créer des maquettes dynamiques de site.</p>
           </div>
           <div class="content" v-else-if="itemAdds === 3">
             <p class="title">Dev-Ops</p>
