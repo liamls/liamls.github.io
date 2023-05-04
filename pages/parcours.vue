@@ -4,7 +4,7 @@
       <div class="avatar">
         <img src="../assets/avatar_v.png" alt="avatar"/>
       </div>
-      <div class="window">
+      <div class="window" @click="nextAdds">
         <div class="title-bar">
           <div class="title-bar-controls">
             <button aria-label="Close"></button>
