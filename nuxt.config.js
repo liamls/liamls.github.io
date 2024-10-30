@@ -8,10 +8,10 @@ export default defineNuxtConfig({
         head: {
             title: 'Portfolio - Liam',
             meta: [
-                {name: 'description', content: 'My portfolio website'}
+                {name: 'description', content: 'Mon portfolio'}
             ],
             link: [
-                {rel: 'icon', type: 'image/x-icon', href: '/assets/gluten-free.png'}
+                {rel: 'icon', type: 'image/x-icon', href: '/assets/icone.png'}
             ]
         }
     }
