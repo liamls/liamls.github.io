@@ -8,7 +8,7 @@
         <div class="menu">
           <NuxtLink to="/parcours">Parcours</NuxtLink>
           <NuxtLink to="/competences">Compétences</NuxtLink>
-          <NuxtLink to="/trackerz">Trackerz</NuxtLink>
+          <NuxtLink to="/projets">Projets</NuxtLink>
         </div>
         <div class="contact">
           <NuxtLink to="/contact">Contact</NuxtLink>
@@ -123,10 +123,12 @@ body.transition-active {
   padding-top: 2vh;
   overflow: auto;
 }
-.content a{
+
+.content a {
   color: white;
   text-decoration: none;
 }
+
 .avatar img {
   transform: translateX(+6vw);
 }
@@ -145,6 +147,7 @@ body.transition-active {
   margin-top: 10vh;
   padding-bottom: 0;
   width: 30vw;
+  cursor: pointer;
 }
 
 .title {
@@ -224,6 +227,7 @@ body.transition-active {
     margin: 0;
     width: 100vw;
   }
+
   .navbar {
     flex-direction: column;
     justify-content: center;
@@ -231,21 +235,26 @@ body.transition-active {
     font-size: 20px;
     transform: translateY(+5vh);
   }
-  .banner{
+
+  .banner {
     flex-direction: column-reverse;
   }
-  .arrow{
+
+  .arrow {
     display: none;
   }
+
   .window {
     margin-top: 5vh;
     width: 90vw;
     margin-left: 0;
   }
+
   .title-bar-controls {
     display: none;
   }
-  body{
+
+  body {
     background-size: auto 120%;
   }
 }

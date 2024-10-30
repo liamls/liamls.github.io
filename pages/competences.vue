@@ -2,7 +2,7 @@
   <div class="container">
     <div class="banner">
       <div class="avatar">
-        <img src="../assets/avatar_mac.png" alt="avatar"/>
+        <img src="../assets/avatar_mac.png" alt="avatar" />
       </div>
       <div class="window" @click="nextAdds">
         <div class="title-bar">
@@ -15,46 +15,61 @@
         <transition name="fade" mode="out-in">
           <div class="content" v-if="itemAdds === 0">
             <p class="title">Mes compétences</p>
-            <p>Que ce soit lors de mon parcours professionnel ou personnel, j'ai pu appréhender de nombreuses technologies.</p>
+            <p>Au cours de mon parcours professionnel et personnel, j'ai eu l'opportunité d'explorer diverses
+              technologies.</p>
           </div>
           <div class="content" v-else-if="itemAdds === 1">
             <p class="title">Back-end</p>
             <p>
-              Du côté back-end, j'ai beaucoup travaillé avec Java et Spring. Que ce soit sur des projets existants ou from scratch.
-              <br/><br/>
-              Dans le cadre de mon projet de fin d'études, j'ai par exemple développé une API Rest communiquant avec une base de données MySQL. J'ai utilisé de nombreuses librairies utiles tel que Spring Security pour la gestion de token JWT.
+              En ce qui concerne le back-end, j'ai acquis une solide expérience avec Java et Spring, que ce soit sur des
+              projets existants ou en partant de zéro.
+              <br /><br />
+              Par exemple, dans le cadre de mon projet de fin d'études, j'ai développé une API REST capable de
+              communiquer avec une base de données MySQL. J'ai également utilisé plusieurs bibliothèques utiles, comme
+              Spring Security, pour la gestion des tokens JWT.
             </p>
+            <p>J'ai toujours travaillé sur des projets organisés en architecture microservices, ce qui les rend beaucoup
+              plus évolutifs et maintenables.</p>
           </div>
           <div class="content" v-else-if="itemAdds === 2">
             <p class="title">Front-end</p>
             <p>
-              En front-end, j'ai appris à développer initialement des sites web en HTML/CSS/JS. Puis, dans le cadre de projets, j'ai ensuite appris à utiliser des frameworks tels que Vue & Nuxt ou encore React.
-              <br/><br/>
-              J'ai également appréhendé certaines notions en UX/UI en utilisant Figma, un outil permettant de créer des maquettes dynamiques de site.</p>
+              Sur le front-end, j'ai commencé par développer des sites web en HTML, CSS et JavaScript. Par la suite,
+              j'ai approfondi mes compétences en utilisant des frameworks tels que Vue, Nuxt et React.
+              <br /><br />
+              J'ai également exploré certaines notions d'UX/UI à travers l'utilisation de Figma, un outil qui permet de
+              créer des maquettes dynamiques de sites.
+            </p>
           </div>
           <div class="content" v-else-if="itemAdds === 3">
             <p class="title">Dev-Ops</p>
             <p>
-              J'ai travaillé au sein d'équipes devant elles-mêmes gérer et déployer leurs projets. J'ai donc appris à utiliser des outils tels que Jenkins/GitLab CI, Docker ou encore Kubernetes.
-              <br/><br/>
-              Par exemple, j'ai participé à la migration de pipelines dans le cloud via Jenkins. J'ai également mis en place des pipelines de déploiement via GitLab CI et K8s.
+              J'ai eu l'occasion de travailler au sein d'équipes responsables de la gestion et du déploiement de leurs
+              projets. Cela m'a permis d'apprendre à utiliser des outils tels que Jenkins, GitLab CI, Docker et
+              Kubernetes.
+              <br /><br />
+              Par exemple, j'ai contribué à la migration de pipelines vers le cloud en utilisant Jenkins et j'ai
+              également mis en place des pipelines de déploiement via GitLab CI et K8s.
             </p>
           </div>
           <div class="content" v-else-if="itemAdds === 4">
             <p class="title">Travail en équipe</p>
             <p>
-              Selon moi, l'une des compétences les plus importantes est la capacité à travailler en équipe. J'ai pu apprendre à travailler avec les méthodes agiles telles que scrum ou encore safe.
-              J'ai pu par exemple animer certaines cérémonies (daily, retro, ...).
-              <br/><br/>
-              J'ai également appris à travailler avec des outils tels que Jira, ou encore Git.
-               </p>
+              Je considère que l'une des compétences les plus précieuses est la capacité à travailler en équipe. J'ai eu
+              la chance d'apprendre à travailler selon des méthodes agiles telles que Scrum et SAFe.
+              J'ai par exemple eu l'occasion d'animer certaines cérémonies (daily, rétro, etc.).
+              <br /><br />
+              J'ai également acquis une expérience avec des outils tels que Jira et Git.
+            </p>
           </div>
           <div class="content" v-else-if="itemAdds === 5">
             <p class="title">Langues</p>
             <p>
-              Ayant travaillé au sein d'un projet international avec des équipes en Roumanie, j'ai pu apprendre à travailler en anglais. J'ai passé la certification TOEIC et obtenu le score de 915 pts.
-              <br/><br/>
-              J'ai également appris le chinois durant mes études et j'ai passé le HSK 3.
+              Mon expérience au sein d'un projet international avec des équipes en Roumanie m'a permis d'améliorer mon
+              anglais. J'ai passé la certification TOEIC et obtenu un score de 915 points.
+              <br /><br />
+              J'ai également eu l'opportunité d'échanger avec des équipes internationales à l'INSEE, notamment avec des
+              développeurs de l'INS en Bulgarie.
             </p>
           </div>
         </transition>
@@ -64,10 +79,8 @@
         <button v-else-if="itemAdds === 5" @click="nextAdds" class="legend">«</button>
       </div>
     </div>
-
   </div>
 </template>
-
 
 <script>
 export default {
@@ -80,11 +93,7 @@ export default {
   },
   methods: {
     nextAdds() {
-      if (this.itemAdds === 5) {
-        this.itemAdds = 0
-      } else {
-        this.itemAdds++
-      }
+      this.itemAdds = (this.itemAdds + 1) % 6; // Cycle through items
     }
   }
 }
