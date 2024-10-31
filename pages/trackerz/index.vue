@@ -47,7 +47,9 @@ export default {
         const apiKey = '26ece191ecec87678d1843a42fa38a06';
         const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`);
         const data = await response.json();
-        this.artists = data.similarartists.artist.slice(0, 5); // Limiter à 5 résultats
+        const maxArtists = window.innerWidth <= 480 ? 3 : 5; // 3 pour mobile, 5 par défaut
+        this.artists = data.similarartists.artist.slice(0, maxArtists);
+
         if (this.artists.length < 1) { throw (error) }
       } catch (error) {
         alert("Erreur lors de la recherche d'artiste - Aucune données pour cet artiste");
@@ -56,6 +58,7 @@ export default {
   }
 }
 </script>
+
 
 <style scoped>
 .window {
