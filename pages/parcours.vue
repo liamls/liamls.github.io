@@ -17,6 +17,10 @@
             <p class="title">Mon parcours</p>
             <p>C'est ici que je vais me présenter, afin que vous puissiez me connaître un peu plus mais également mon
               parcours scolaire et professionnel.</p>
+            <p>Au fil de mes études et de mes projets, j'ai pu me spécialiser dans des domaines variés et acquérir des
+              compétences techniques et transverses qui font de moi le développeur que je suis actuellement.</p>
+            <p>Cette diversité d'expériences m'a permis d'aborder le développement sous différents angles et de me doter
+              d’une solide capacité d’adaptation face aux nouveaux défis technologiques.</p>
           </div>
           <div class="content" v-else-if="itemAdds === 1">
             <p class="title">Lycée</p>
@@ -35,7 +39,9 @@
               En cours, j'ai pu appréhender de nombreuses matières telles que la programmation, la sécurité, les
               réseaux, la téléphonie, la gestion de projet, etc.
               <br /><br />
-              En parallèle, j'ai appris le métier de technicien d'intervention en alternance chez Orange.
+              En parallèle, j'ai appris le métier de technicien d'intervention en alternance chez Orange. Même si ce
+              n'est pas dans le domaine du développement informatique, cette expérience m'a énormément appris que ce
+              soit pour apprendre à raisonner ou bien du côté relationnel.
             </p>
           </div>
           <div class="content" v-else-if="itemAdds === 3">
@@ -45,7 +51,11 @@
               <br /><br />
               J'ai eu de nombreux cours intéressants pendant ma formation au sein de cette école. Notamment mes modules
               de spécialité de dernière année, le premier en I.A. et le deuxième en ingénierie logicielle.
+              <br /><br />
+              J'ai obtenu mon diplôme avec 15.36 de moyenne générale, avec un franc succès pour mon projet de fin
+              d'études.
             </p>
+
           </div>
           <div class="content" v-else-if="itemAdds === 4">
             <p class="title">Orange Business Services</p>
@@ -76,10 +86,12 @@
                   href="https://catalogue-donnees.insee.fr/fr/catalogue/recherche" target="_blank"
                   @click.stop>Melodi</a></strong>. Mon rôle
               consiste à implémenter de nouvelles fonctionnalités que ce soit au niveau du front-end avec ReactJS ou du
-              back-end avec Java. Nous sommes 3 développeurs sur ce projet.
+              back-end avec Java. Nous sommes une équipe de trois développeurs travaillant en méthodologie agile en
+              collaboration avec trois
+              membres de l’équipe métier.
               <br /><br />
-              Je suis également en charge de l'accessibilité de cette application, afin de rendre le site utilisable par
-              tout le monde.
+              Je suis également en charge de l'accessibilité de cette application, visant à la rendre inclusive et
+              utilisable par tous.
             </p>
           </div>
           <div class="content" v-else-if="itemAdds === 7">
@@ -98,9 +110,10 @@
       </div>
       <div class="arrow" :key="itemAdds">
         <button v-if="itemAdds !== 7" @click="nextAdds" class="legend">></button>
-        <button v-else-if="itemAdds === 7" @click="nextAdds" class="legend">«</button>
+        <button v-else-if="itemAdds === 7" @click="nextAdds" class="legend">⟳</button>
       </div>
     </div>
+    <p class="mobile-only">Cliquez sur la fenêtre pour afficher les prochaines informations.</p>
   </div>
 </template>
 

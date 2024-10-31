@@ -15,8 +15,11 @@
         <transition name="fade" mode="out-in">
           <div class="content" v-if="itemAdds === 0">
             <p class="title">Mes compétences</p>
-            <p>Au cours de mon parcours professionnel et personnel, j'ai eu l'opportunité d'explorer diverses
-              technologies.</p>
+            <p>Au cours de mon parcours professionnel et personnel, j'ai eu l'opportunité de développer des compétences
+              variées qui me permettent de m’adapter aux nombreux défis du monde du développement.</p>
+            <p>Cette polyvalence me permet aujourd'hui d'avoir une vue d'ensemble sur la conception et la mise en œuvre
+              de solutions techniques, en tenant compte des exigences de performance, de sécurité et d'expérience
+              utilisateur.</p>
           </div>
           <div class="content" v-else-if="itemAdds === 1">
             <p class="title">Back-end</p>
@@ -28,8 +31,6 @@
               communiquer avec une base de données MySQL. J'ai également utilisé plusieurs bibliothèques utiles, comme
               Spring Security, pour la gestion des tokens JWT.
             </p>
-            <p>J'ai toujours travaillé sur des projets organisés en architecture microservices, ce qui les rend beaucoup
-              plus évolutifs et maintenables.</p>
           </div>
           <div class="content" v-else-if="itemAdds === 2">
             <p class="title">Front-end</p>
@@ -53,13 +54,14 @@
             </p>
           </div>
           <div class="content" v-else-if="itemAdds === 4">
-            <p class="title">Travail en équipe</p>
+            <p class="title">Gestion de projet</p>
             <p>
               Je considère que l'une des compétences les plus précieuses est la capacité à travailler en équipe. J'ai eu
               la chance d'apprendre à travailler selon des méthodes agiles telles que Scrum et SAFe.
               J'ai par exemple eu l'occasion d'animer certaines cérémonies (daily, rétro, etc.).
               <br /><br />
-              J'ai également acquis une expérience avec des outils tels que Jira et Git.
+              J'ai également acquis une expérience avec des outils tels que Jira et Git, indispensable pour le travail
+              collaboratif au sein d'une équipe.
             </p>
           </div>
           <div class="content" v-else-if="itemAdds === 5">
@@ -76,9 +78,10 @@
       </div>
       <div class="arrow" :key="itemAdds">
         <button v-if="itemAdds !== 5" @click="nextAdds" class="legend">></button>
-        <button v-else-if="itemAdds === 5" @click="nextAdds" class="legend">«</button>
+        <button v-else-if="itemAdds === 5" @click="nextAdds" class="legend">⟳</button>
       </div>
     </div>
+    <p class="mobile-only">Cliquez sur la fenêtre pour afficher les prochaines informations.</p>
   </div>
 </template>
 

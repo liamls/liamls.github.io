@@ -41,18 +41,29 @@
 
 body {
   background-image: url('../assets/background.jpg');
-  margin: 0;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   height: 100%;
   font-family: "Montserrat";
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.bodycontainer {
+  overflow: auto;
+  height: calc(100% - 2vh);
 }
 
 header {
@@ -129,7 +140,9 @@ body.transition-active {
   text-decoration: none;
 }
 
-.avatar img {
+.avatar,
+.avatar-mobile img {
+  display: block;
   transform: translateX(+6vw);
 }
 
@@ -144,10 +157,26 @@ body.transition-active {
   border: 1px solid rgba(255, 255, 255, 0.4);
   margin: 3vw;
   padding: 1vw;
-  margin-top: 10vh;
   padding-bottom: 0;
   width: 30vw;
+  height: 30vh;
   cursor: pointer;
+}
+
+.window-small {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 3vw;
+  padding: 1vw;
+  padding-bottom: 0;
+  width: 15vw;
+  height: 20vh;
 }
 
 .title {
@@ -208,7 +237,7 @@ body.transition-active {
   cursor: pointer;
   text-decoration: none;
   margin: auto;
-  width: 40%;
+  width: 5vw;
   font-size: 90px;
 }
 
@@ -222,10 +251,36 @@ body.transition-active {
   opacity: 0;
 }
 
+.mobile-only {
+  display: none;
+}
+
+
 @media only screen and (max-width: 480px) {
   header {
     margin: 0;
     width: 100vw;
+  }
+
+  .avatar {
+    display: none;
+  }
+
+  .avatar-mobile {
+    display: block;
+  }
+
+  .avatar-mobile img {
+    display: block;
+    width: 75vw;
+    transform: translateX(+5vw);
+
+  }
+
+  .mobile-only {
+    display: block;
+    color: rgb(121, 121, 121);
+    padding: 5vw;
   }
 
   .navbar {
@@ -245,9 +300,15 @@ body.transition-active {
   }
 
   .window {
-    margin-top: 5vh;
-    width: 90vw;
-    margin-left: 0;
+    padding: 0.8rem;
+    width: 85vw;
+    height: 50vh;
+  }
+
+  .window-small {
+    padding: 1rem;
+    width: 80vw;
+    height: 25vh;
   }
 
   .title-bar-controls {

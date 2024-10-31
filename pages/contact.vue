@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="banner">
-      <div class="avatar">
+      <div class="avatar-mobile">
         <img src="../assets/avatar_cross.png" alt="avatar" />
       </div>
-      <div class="window">
+      <div class="window-small">
         <div class="title-bar">
           <div class="title-bar-controls">
             <button aria-label="Close"></button>
