@@ -160,11 +160,11 @@ body.transition-active {
   flex-direction: column;
   background: rgba(255, 255, 255, 0.11);
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(7.4px);
   -webkit-backdrop-filter: blur(7.4px);
   border: 1px solid rgba(255, 255, 255, 0.4);
   margin: 3vw;
+  margin-right: 0;
   padding: 1vw;
   padding-bottom: 0;
   width: 30vw;
@@ -242,7 +242,7 @@ body.transition-active {
 }
 
 .legend {
-  color: rgb(166, 165, 165);
+  color: rgb(243, 243, 243);
   border: none;
   background: transparent;
   cursor: pointer;
@@ -250,8 +250,25 @@ body.transition-active {
   margin: auto;
   width: 5vw;
   font-size: 90px;
-  opacity: 75%;
+  opacity: 85%;
+  font-weight: 400;
+  animation: glowAnimation 2s infinite alternate;
 }
+
+@keyframes glowAnimation {
+  0% {
+    text-shadow: 0 0 3px #ffffff, 0 0 6px #ffffff;
+  }
+
+  50% {
+    text-shadow: 0 0 5px #ffffff, 0 0 8px #ffffffff;
+  }
+
+  100% {
+    text-shadow: 0 0 3px #ffffff, 0 0 6px #ffffff;
+  }
+}
+
 
 .legend:hover {
   opacity: 100%;
@@ -279,7 +296,7 @@ body.transition-active {
   opacity: 100%;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width:720px) {
   header {
     margin: 0;
     width: 100vw;
@@ -334,13 +351,34 @@ body.transition-active {
   .window {
     padding: 0.8rem;
     width: 85vw;
-    height: 50vh;
+    height: auto;
   }
+
+  .window {
+    padding: 0.8rem;
+    width: 85vw;
+    height: auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    animation: windowGlow 1.5s infinite alternate;
+  }
+
+  @keyframes windowGlow {
+    0% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+  }
+
 
   .window-small {
     padding: 1rem;
     width: 80vw;
-    height: 25vh;
+    height: auto;
   }
 
   .title-bar-controls {
@@ -350,6 +388,29 @@ body.transition-active {
   body {
     background-size: auto 120%;
   }
+}
+
+@media only screen and (max-width: 1700px) and (min-width: 720px) {
+  .window {
+    width: 50vw;
+    height: auto;
+  }
+
+  .window-small {
+    width: 30vw;
+    height: auto;
+  }
+
+  .avatar img {
+    display: block;
+    width: 20vw;
+  }
+
+  .avatar-mobile img {
+    display: block;
+    width: 20vw;
+  }
+
 }
 </style>
 

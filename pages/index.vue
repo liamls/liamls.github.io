@@ -23,3 +23,9 @@
       la portfolio via un ordinateur.</p>
   </div>
 </template>
+
+<style scoped>
+.window {
+  cursor: default;
+}
+</style>
