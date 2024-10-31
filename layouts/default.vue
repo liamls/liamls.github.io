@@ -262,6 +262,13 @@ body.transition-active {
     width: 100vw;
   }
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-top: 12vh;
+  }
+
   .avatar {
     display: none;
   }
@@ -281,6 +288,7 @@ body.transition-active {
     display: block;
     color: rgb(121, 121, 121);
     padding: 5vw;
+    font-size: 75%;
   }
 
   .navbar {
