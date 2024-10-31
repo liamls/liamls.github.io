@@ -43,7 +43,7 @@
                             <p>
                                 Trackerz est un outil très simple conçu pour aider les utilisateurs à découvrir des
                                 artistes
-                                similaires. Plutôt qu'un projet en cours de développement, cet outil montre comment
+                                similaires. Plutôt qu'un réel projet, cet outil montre comment
                                 intégrer une API externe pour fournir des recommandations musicales personnalisées.
                                 <br /><br />
                                 Vous pouvez explorer cette application en cliquant

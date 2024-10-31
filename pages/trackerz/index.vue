@@ -12,16 +12,17 @@
         <div class="content">
           <h1>Bienvenue sur Trackerz</h1>
           <p>Trackerz est un outil qui vous permet de rechercher des artistes similaires à ceux que vous aimez.</p>
-          <NuxtLink class="legend" to="https://www.last.fm/home">Via l'API @lastfm</NuxtLink>
-          <form id="searchForm">
-            <label for="searchInput">Entre un nom d'artiste :</label>
-            <input type="text" id="searchInput" required>
-            <button @click.prevent='searchArtists'>Go</button>
+          <NuxtLink class="link" to="https://www.last.fm/home">Via l'API @lastfm</NuxtLink><br />
+          <form id="searchForm" @submit.prevent='searchArtists'>
+            <div class="recherche">
+              <input type="text" id="searchInput" required placeholder="Entre un nom d'artiste">
+              <button type="submit"><strong>GO</strong></button>
+            </div>
           </form>
         </div>
       </div>
     </div>
-    <div class="result" v-if="artists !== []">
+    <div class="result" v-if="artists.length > 0">
       <div v-for="artist in artists" :key="artist.name" class="result-item">
         <a :href="artist.url" target="_blank" rel="noopener noreferrer">{{ artist.name }}</a>
       </div>
@@ -39,25 +40,17 @@ export default {
   },
   methods: {
     async searchArtists() {
-      try{
+      try {
         this.artists = [];
-        this.artistName = [];
-        this.artistData = [];
-        let searchInput = document.getElementById('searchInput');
-        let resultContainer = document.getElementById('resultContainer');
-        let query = searchInput.value;
-        let apiKey = '26ece191ecec87678d1843a42fa38a06';
-        let response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`);
-        let data = await response.json();
-        console.log(data)
-        this.artists = data.similarartists.artist;
-        if (this.artists.length >= 5) {
-          this.artists = this.artists.slice(0, 5);
-        }
-        console.log(this.artists);
-      }
-      catch (error) {
-        alert("Erreur lors de la recherche d'artiste -- "+ error);
+        const searchInput = document.getElementById('searchInput');
+        const query = searchInput.value;
+        const apiKey = '26ece191ecec87678d1843a42fa38a06';
+        const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=artist.getsimilar&artist=${query}&api_key=${apiKey}&format=json`);
+        const data = await response.json();
+        this.artists = data.similarartists.artist.slice(0, 5); // Limiter à 5 résultats
+        if (this.artists.length < 1) { throw (error) }
+      } catch (error) {
+        alert("Erreur lors de la recherche d'artiste - Aucune données pour cet artiste");
       }
     }
   }
@@ -65,99 +58,100 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  margin-top: 5vh;
-  flex-direction: column;
-  align-items: center;
-}
-
-.result {
-  display: flex;
-  margin-top: 5vh;
-}
-
-.result-item {
-  background-color: rgba(255, 255, 255, 0.396);
-}
-.result-item a{
-  color: white;
-  text-decoration: none;
-}
 .window {
-  margin: 0;
-  height: 100%;
+  height: auto;
 }
 
-form {
-  margin: 20px 0;
+.link {
+  color: lightgray;
+  font-size: 80%;
+  opacity: 80%;
+
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
+#searchForm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 input[type="text"] {
-  padding: 5px;
   border: 1px solid #ccc;
+  height: 2rem;
   border-radius: 4px;
-  width: 300px;
-  font-size: 16px;
-  background-color: rgba(255, 255, 255, 0.396);
+  background-color: rgb(190, 190, 190);
+  width: 20vw;
+}
+
+input:focus {
+  outline: none;
 }
 
 #searchForm button {
-  padding: 5px 10px;
   background-color: black;
-  opacity: 60%;
   color: #fff;
+  opacity: 80%;
   border: none;
+  height: 2.2rem;
+  width: auto;
   border-radius: 4px;
   font-size: 16px;
   cursor: pointer;
 }
 
-#searchForm button:hover {
-  opacity: 80%;
-}
-
-.result-item {
-  margin: 10px 0;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.recherche {
   display: flex;
+  flex-direction: row;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  width: auto;
+  font-size: 16px;
   align-items: center;
 }
 
-.legend {
-  font-size: 15px;
+#searchForm button:hover {
+  opacity: 100%;
 }
 
-.result-item img {
-  margin-right: 10px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
+.result {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.result-item h3 {
-  font-size: 18px;
-  margin: 0;
+.result-item {
+  margin: 0.5rem;
+  padding: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: rgba(32, 32, 32, 0.918);
 }
+
+.result-item a {
+  color: white;
+  text-decoration: nrgba(77, 76, 76, 0.918);
+  text-decoration: none;
+}
+
 
 @media only screen and (max-width: 480px) {
-  .window {
-    margin-top: 10vh;
-    width: 90vw;
-    margin-left: 0;
-    font-size: 15px;
-    padding: 2vw;
+  input[type="text"] {
+    width: 80vw;
   }
 
-  h1 {
-    font-size: 18px;
+  .result {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .result-item {
+    margin: 0.4rem;
+    padding: 0.8rem;
+    font-weight: bold;
   }
 }
 </style>
