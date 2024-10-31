@@ -161,6 +161,7 @@ body.transition-active {
   width: 30vw;
   height: 30vh;
   cursor: pointer;
+  outline: none;
 }
 
 .window-small {
@@ -177,6 +178,7 @@ body.transition-active {
   padding-bottom: 0;
   width: 15vw;
   height: 20vh;
+  outline: none;
 }
 
 .title {
