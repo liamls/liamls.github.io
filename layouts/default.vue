@@ -352,12 +352,6 @@ body.transition-active {
     padding: 0.8rem;
     width: 85vw;
     height: auto;
-  }
-
-  .window {
-    padding: 0.8rem;
-    width: 85vw;
-    height: auto;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(7.4px);
     -webkit-backdrop-filter: blur(7.4px);
@@ -379,6 +373,10 @@ body.transition-active {
     padding: 1rem;
     width: 80vw;
     height: auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    animation: windowGlow 1.5s infinite alternate;
   }
 
   .title-bar-controls {
