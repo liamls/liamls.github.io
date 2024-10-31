@@ -82,7 +82,7 @@
           <div class="content" v-else-if="itemAdds === 6">
             <p class="title">INSEE - Melodi</p>
             <p>
-              Actuellement, je travaille à l'INSEE à Paris, où j'ai intégré le projet <strong><a
+              Actuellement, je travaille à l'INSEE à Paris, où j'ai intégré le projet <strong><a class="lien"
                   href="https://catalogue-donnees.insee.fr/fr/catalogue/recherche" target="_blank"
                   @click.stop>Melodi</a></strong>. Mon rôle
               consiste à implémenter de nouvelles fonctionnalités que ce soit au niveau du front-end avec ReactJS ou du
@@ -97,8 +97,9 @@
           <div class="content" v-else-if="itemAdds === 7">
             <p class="title">INSEE - Site Datavisualisation</p>
             <p>
-              Je suis également responsable du <strong><a href="https://www.insee.fr/fr/outil-interactif/5369554"
-                  target="_blank" @click.stop>site de datavisualisation pour les salaires</a></strong>.
+              Je suis également responsable du <strong><a class="lien"
+                  href="https://www.insee.fr/fr/outil-interactif/5369554" target="_blank" @click.stop>site de
+                  datavisualisation pour les salaires</a></strong>.
               Mon rôle inclut la maintenance et le développement de l'interface
               utilisateur pour garantir une expérience optimale pour les utilisateurs.
               <br /><br />

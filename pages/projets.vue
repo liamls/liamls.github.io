@@ -32,7 +32,8 @@
                                 travaillant notamment avec le média RapMinute.
                                 <br /><br />Nous avons réalisé le design ensemble, et j'ai codé de manière simple pour
                                 qu'il puisse lui-même rajouter ses projets.
-                                <a href="https://mikhaprod.com" target="_blank" rel="noopener noreferrer" @click.stop>
+                                <a class="lien" href="https://mikhaprod.com" target="_blank" rel="noopener noreferrer"
+                                    @click.stop>
                                     <strong>Découvrez le site ici</strong>
                                 </a>.
                                 <br /><br />Ce site a été réalisé avec le framework React.
@@ -48,7 +49,7 @@
                                 <br /><br />
                                 Vous pouvez explorer cette application en cliquant
                                 ci-dessous.
-                                <NuxtLink class="link" to="/trackerz" @click.stop>
+                                <NuxtLink class="lien" to="/trackerz" @click.stop>
                                     <strong>Essayez Trackerz ici</strong>
                                 </NuxtLink>.
                             </p>

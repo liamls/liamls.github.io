@@ -24,7 +24,7 @@
     </div>
     <div class="result" v-if="artists.length > 0">
       <div v-for="artist in artists" :key="artist.name" class="result-item">
-        <a :href="artist.url" target="_blank" rel="noopener noreferrer">{{ artist.name }}</a>
+        <a class="lien" :href="artist.url" target="_blank" rel="noopener noreferrer">{{ artist.name }}</a>
       </div>
     </div>
   </div>

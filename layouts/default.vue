@@ -271,6 +271,13 @@ body.transition-active {
   display: none;
 }
 
+.lien {
+  opacity: 75%;
+}
+
+.lien:hover {
+  opacity: 100%;
+}
 
 @media only screen and (max-width: 480px) {
   header {
