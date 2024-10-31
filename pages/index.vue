@@ -2,7 +2,7 @@
   <div class="container">
     <div class="banner">
       <div class="avatar">
-        <img src="../assets/avatar.png" alt="avatar" />
+        <img src="../assets/avatar_hi.png" alt="avatar" />
       </div>
       <div class="window">
         <div class="title-bar">

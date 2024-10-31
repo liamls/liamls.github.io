@@ -2,7 +2,7 @@
   <div class="container">
     <div class="banner">
       <div class="avatar">
-        <img src="../assets/avatar_mac.png" alt="avatar" />
+        <img src="../assets/avatar_think.png" alt="avatar" />
       </div>
       <div class="window" @click="nextAdds">
         <div class="title-bar">

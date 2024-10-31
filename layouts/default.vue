@@ -149,10 +149,13 @@ body.transition-active {
   text-decoration: none;
 }
 
-.avatar,
+.avatar img,
 .avatar-mobile img {
   display: block;
-  transform: translateX(+6vw);
+  transform: translateX(+6.5vw);
+  height: 500px;
+  border-radius: 40%;
+  object-fit: contain;
 }
 
 .window {
@@ -320,7 +323,7 @@ body.transition-active {
 
   .avatar-mobile img {
     display: block;
-    width: 75vw;
+    width: 80vw;
     transform: translateX(+5vw);
 
   }

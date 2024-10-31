@@ -2,7 +2,7 @@
   <div class="container">
     <div class="banner">
       <div class="avatar-mobile">
-        <img src="../assets/avatar_cross.png" alt="avatar" />
+        <img src="../assets/avatar_please.png" alt="avatar" />
       </div>
       <div class="window-small">
         <div class="title-bar">
