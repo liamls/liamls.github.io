@@ -15,8 +15,9 @@
         <div class="content">
           <p class="title">N'hésitez pas à me contacter !</p>
           <p><b>Mail</b> : <a href="mailto:lestratliam@gmail.com">lestratliam@gmail.com</a></p>
-          <p><b>Github</b> : <a href="https://github.com/liamls">@liamls</a></p>
-          <p><b>Linkedin</b> : <a href="https://www.linkedin.com/in/liam-le-strat/">Liam Le Strat</a></p>
+          <p><b>Github</b> : <a href="https://github.com/liamls" target="_blank">@liamls</a></p>
+          <p><b>Linkedin</b> : <a href="https://www.linkedin.com/in/liam-le-strat/" target="_blank">Liam Le Strat</a>
+          </p>
           <span />
         </div>
       </div>
