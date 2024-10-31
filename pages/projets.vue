@@ -57,7 +57,7 @@
                 </transition>
             </div>
             <div class="arrow" :key="itemAdds">
-                <button v-if="itemAdds < 3" @click="nextProjects" class="legend">></button>
+                <button v-if="itemAdds < 2" @click="nextProjects" class="legend">></button>
                 <button v-else @click="nextProjects" class="legend">⟳</button>
             </div>
         </div>
