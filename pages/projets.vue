@@ -48,7 +48,7 @@
                                 <br /><br />
                                 Vous pouvez explorer cette application en cliquant
                                 ci-dessous.
-                                <NuxtLink to="/trackerz" @click.stop>
+                                <NuxtLink class="link" to="/trackerz" @click.stop>
                                     <strong>Essayez Trackerz ici</strong>
                                 </NuxtLink>.
                             </p>

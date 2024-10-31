@@ -250,6 +250,11 @@ body.transition-active {
   margin: auto;
   width: 5vw;
   font-size: 90px;
+  opacity: 75%;
+}
+
+.legend:hover {
+  opacity: 100%;
 }
 
 .fade-enter-active,
