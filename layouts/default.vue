@@ -28,6 +28,15 @@
     url(../assets/Montserrat-VariableFont_wght.ttf) format("truetype");
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.noSelect:focus {
+  outline: none !important;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.2s;
@@ -98,7 +107,7 @@ header {
 
 .home,
 .contact {
-  margin: 0 1vw;
+  margin: 2vw;
 }
 
 .bodycontainer {
@@ -262,6 +271,7 @@ body.transition-active {
   header {
     margin: 0;
     width: 100vw;
+    margin-top: 3vh;
   }
 
   .container {
