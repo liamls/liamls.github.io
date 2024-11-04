@@ -60,7 +60,7 @@
               la chance d'apprendre à travailler selon des méthodes agiles telles que Scrum et SAFe.
               J'ai par exemple eu l'occasion d'animer certaines cérémonies (daily, rétro, etc.).
               <br /><br />
-              J'ai également acquis une expérience avec des outils tels que Jira et Git, indispensable pour le travail
+              J'ai également acquis une expérience avec des outils tels que Jira et Git, indispensables pour le travail
               collaboratif au sein d'une équipe.
             </p>
           </div>

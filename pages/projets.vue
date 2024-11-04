@@ -22,7 +22,7 @@
                                 <br /><br />
                                 Ce site a été développé avec le framework NuxtJS durant ma dernière année d'école
                                 d'ingénieur, ce qui me permet de maintenir mes connaissances sur ce dernier lorsque je
-                                le mets à jour.
+                                l'actualise.
                             </p>
                         </div>
                         <div class="content" v-if="itemAdds === 1">

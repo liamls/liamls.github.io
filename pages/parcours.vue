@@ -19,8 +19,9 @@
               parcours scolaire et professionnel.</p>
             <p>Au fil de mes études et de mes projets, j'ai pu me spécialiser dans des domaines variés et acquérir des
               compétences techniques et transverses qui font de moi le développeur que je suis actuellement.</p>
-            <p>Cette diversité d'expériences m'a permis d'aborder le développement sous différents angles et de me doter
-              d’une solide capacité d’adaptation face aux nouveaux défis technologiques.</p>
+            <p>Cette diversité d'expériences m'a permis d'aborder le développement sous différents angles et de
+              développer
+              une solide capacité d’adaptation aux nouveaux défis technologiques.</p>
           </div>
           <div class="content" v-else-if="itemAdds === 1">
             <p class="title">Lycée</p>
@@ -39,9 +40,9 @@
               En cours, j'ai pu appréhender de nombreuses matières telles que la programmation, la sécurité, les
               réseaux, la téléphonie, la gestion de projet, etc.
               <br /><br />
-              En parallèle, j'ai appris le métier de technicien d'intervention en alternance chez Orange. Même si ce
-              n'est pas dans le domaine du développement informatique, cette expérience m'a énormément appris que ce
-              soit pour apprendre à raisonner ou bien du côté relationnel.
+              En parallèle, j'ai appris le métier de technicien d'intervention en alternance chez Orange. Même si cette
+              expérience n’était pas dans le domaine du développement informatique, elle m’a beaucoup appris, tant sur
+              le plan du raisonnement que des relations interpersonnelles.
             </p>
           </div>
           <div class="content" v-else-if="itemAdds === 3">
@@ -52,7 +53,8 @@
               J'ai eu de nombreux cours intéressants pendant ma formation au sein de cette école. Notamment mes modules
               de spécialité de dernière année, le premier en I.A. et le deuxième en ingénierie logicielle.
               <br /><br />
-              J'ai obtenu mon diplôme avec 15.36 de moyenne générale, avec un franc succès pour mon projet de fin
+              J'ai obtenu mon diplôme avec une moyenne générale de 15.36, avec un franc succès concernant mon projet de
+              fin
               d'études.
             </p>
 
@@ -72,8 +74,8 @@
             <p class="title">Projet de fin d'études</p>
             <p>
               J'ai effectué mon projet de fin d'études au sein de l'équipe visant à gérer la partie I.A. et data de
-              Malima. Mon rôle pour cette dernière étape était
-              de faire une refonte du portail de démonstration qu'ils utilisent.
+              Malima. Mon rôle pour cette dernière étape était de faire une refonte du portail de démonstration qu'elle
+              utilise.
               <br /><br />
               Pour ce faire, je suis intervenu sur toute la chaîne de production en refaisant le back-end via Spring, le
               front-end via Nuxt.Js et en mettant en place la CI/CD via GitLab CI et K8s.
@@ -86,9 +88,8 @@
                   href="https://catalogue-donnees.insee.fr/fr/catalogue/recherche" target="_blank"
                   @click.stop>Melodi</a></strong>. Mon rôle
               consiste à implémenter de nouvelles fonctionnalités que ce soit au niveau du front-end avec ReactJS ou du
-              back-end avec Java. Nous sommes une équipe de trois développeurs travaillant en méthodologie agile en
-              collaboration avec trois
-              membres de l’équipe métier.
+              back-end avec Java. Nous formons une équipe de trois développeurs travaillant en méthodologie agile, en
+              étroite collaboration avec trois membres de l’équipe métier.
               <br /><br />
               Je suis également en charge de l'accessibilité de cette application, visant à la rendre inclusive et
               utilisable par tous.
@@ -103,8 +104,8 @@
               Mon rôle inclut la maintenance et le développement de l'interface
               utilisateur pour garantir une expérience optimale pour les utilisateurs.
               <br /><br />
-              Ce projet me permet de mettre en pratique mes compétences en développement web tout en étant directement
-              impliqué dans la partie UX / UI Design qui m'intéresse énormément.
+              Ce projet me permet de mettre en pratique mes compétences en développement web tout
+              en participant directement à l’UI/UX design, un domaine qui m’intéresse particulièrement.
             </p>
           </div>
         </transition>
