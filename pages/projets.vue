@@ -54,11 +54,26 @@
                                 </NuxtLink>.
                             </p>
                         </div>
+                        <div class="content" v-else-if="itemAdds === 3">
+                            <p class="title">Shogi Quest</p>
+                            <p>
+                                Shogi Quest est un projet de jeu de Shogi simplifié en passant par des lettres plutôt
+                                que les idéogrammes japonais.
+                                La logique du jeu est effectué en JavaScript via le ReactJS et permet de faire des
+                                parties pour apprendre à jouer aux échecs nippons.
+                                <br /><br />
+                                N'hésitez pas à tester une partie.
+                                <a class="lien" href="https://shogi-quest-hkegci9ym-liamls-projects.vercel.app/"
+                                    target="_blank" rel="noopener noreferrer" @click.stop>
+                                    <strong>Découvrez le site ici</strong>
+                                </a>.
+                            </p>
+                        </div>
                     </div>
                 </transition>
             </div>
             <div class="arrow" :key="itemAdds">
-                <button v-if="itemAdds < 2" @click="nextProjects" class="legend">></button>
+                <button v-if="itemAdds < 3" @click="nextProjects" class="legend">></button>
                 <button v-else @click="nextProjects" class="legend">⟳</button>
             </div>
         </div>
@@ -76,7 +91,7 @@ export default {
     },
     methods: {
         nextProjects() {
-            this.itemAdds = (this.itemAdds + 1) % 3;
+            this.itemAdds = (this.itemAdds + 1) % 4;
         },
     }
 }
