@@ -121,12 +121,12 @@ export const experiences: Experience[] = [
 ];
 
 export const projects: Project[] = [
-  { title: 'Richie', image: funLogo, badge: 'Catalogue', tone: 'blue', body: 'Portail public d’une plateforme de formation : revue de code, développement de fonctionnalités et arbitrage des contributions.', stack: ['Django CMS', 'Python', 'PostgreSQL'], href: 'https://github.com/openfun/richie' },
-  { title: 'Joanie', image: funLogo, badge: 'Back-office', tone: 'purple', body: 'Back-office des commandes et certificats : développement front-end et intégration API.', stack: ['Next.js', 'TypeScript', 'Django', 'Python'], href: 'https://github.com/openfun/joanie' },
+  { title: 'Richie', image: funLogo, badge: 'Catalogue', tone: 'blue', body: 'Portail public d’une plateforme de formation : revue de code, développement de fonctionnalités et arbitrage des contributions.', stack: ['React', 'TypeScript', 'Django CMS'], href: 'https://github.com/openfun/richie' },
+  { title: 'Joanie', image: funLogo, badge: 'Back-office', tone: 'purple', body: 'Back-office des commandes et certificats : développement front-end et intégration API.', stack: ['Next.js', 'TypeScript', 'Django'], href: 'https://github.com/openfun/joanie' },
   { title: 'Liam House', image: liamHouse, badge: 'Creative 3D', tone: 'orange', body: 'Scène interactive 3D conçue lors du Three.js Journey — 4e au concours de la communauté.', stack: ['React', 'Three.js', 'Blender'], href: 'https://liam-house-threejs.vercel.app/' },
   { title: 'Pokecard', image: pokecard, badge: 'Jeu', tone: 'pink', body: 'Simulateur d’ouverture de boosters dans le navigateur : animations de tirage et effets de brillance.', stack: ['React', 'CSS', 'Animation'], href: 'https://pokecard-tau.vercel.app/' },
-  { title: 'Mikha Prod', image: mikhaProd, badge: 'Site vitrine', tone: 'green', body: 'Site vitrine d’un vidéaste indépendant, de la définition du besoin à la mise en ligne.', stack: ['React', 'HTML/CSS', 'SEO'], href: 'https://mikhaprod.com/' },
-  { title: 'Ce portfolio', image: cePortfolio, badge: 'Ce site', tone: 'cyan', body: 'Le site que vous parcourez : thème clair/sombre, curseur interactif, halos réactifs et accessibilité RGAA.', stack: ['React', 'UI/UX', 'TypeScript'] },
+  { title: 'Mikha Prod', image: mikhaProd, badge: 'Site vitrine', tone: 'green', body: 'Site vitrine d’un vidéaste indépendant, de la définition du besoin à la mise en ligne.', stack: ['React', 'Cadrage & écoute client', 'SEO'], href: 'https://mikhaprod.com/' },
+  { title: 'Ce portfolio', image: cePortfolio, badge: 'Ce site', tone: 'cyan', body: 'Le site que vous parcourez : thème clair/sombre, curseur interactif, halos réactifs et accessibilité RGAA.', stack: ['React', 'TypeScript', 'Design UI/UX'] },
 ];
 
 export const stackGroups: StackGroup[] = [
@@ -147,7 +147,7 @@ export const stackGroups: StackGroup[] = [
       { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
       { name: 'Java / Spring', icon: 'devicon-java-plain colored' },
       { name: 'Python / Django', icon: 'devicon-python-plain colored' },
-      { name: 'SQL', icon: null },
+      { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
       { name: 'API REST', icon: null },
       { name: 'Keycloak', icon: null },
     ],
@@ -156,7 +156,7 @@ export const stackGroups: StackGroup[] = [
     name: 'Outillage & infra',
     items: [
       { name: 'Git', icon: 'devicon-git-plain colored' },
-      { name: 'CI/CD', icon: null },
+      { name: 'Jenkins', icon: 'devicon-jenkins-plain colored' },
       { name: 'Docker', icon: 'devicon-docker-plain colored' },
       { name: 'Kubernetes', icon: 'devicon-kubernetes-plain colored' },
       { name: 'Jest / Vitest', icon: 'devicon-jest-plain colored' },
