@@ -12,6 +12,7 @@ export interface NavLink {
 export interface KeyPoint {
   title: string;
   body: string;
+  link?: { text: string; href: string };
 }
 
 export interface Experience {
@@ -76,9 +77,13 @@ export const nav: NavLink[] = [
 ];
 
 export const keypoints: KeyPoint[] = [
-  { title: 'Open source', body: 'Je maintiens Richie et Joanie, avec des contributions publiques régulières.' },
-  { title: '6 ans', body: 'Spécialisé en développement front-end, avec une vision d’ensemble sur toute la chaîne de production d’une application.' },
-  { title: 'Accessibilité & perf', body: 'Un engagement fort sur la qualité web et le respect des normes.' },
+  {
+    title: 'Open source',
+    body: "Je maintiens et fait évoluer les applications de l'organisation @openfun, avec des contributions publiques régulières.",
+    link: { text: '@openfun', href: 'https://github.com/openfun' },
+  },
+  { title: "6 ans d'expérience", body: 'Spécialisé en développement front-end, avec une vision d’ensemble sur toute la chaîne de production d’une application.' },
+  { title: 'Accessibilité & performances', body: 'Je conçois des applications rapides et inclusives, en respectant les standards du web pour offrir une expérience optimale à chaque utilisateur.' },
 ];
 
 export const experiences: Experience[] = [

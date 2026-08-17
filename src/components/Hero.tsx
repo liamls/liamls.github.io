@@ -53,7 +53,27 @@ function HeroBase() {
               <span className="h-2 w-2 rotate-45 bg-orange" />
               {k.title}
             </div>
-            <p className="m-0 text-sm leading-[1.55] text-muted">{k.body}</p>
+            <p className="m-0 text-sm leading-[1.55] text-muted">
+              {k.link
+                ? (() => {
+                    const [before, after] = k.body.split(k.link.text);
+                    return (
+                      <>
+                        {before}
+                        <a
+                          href={k.link.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-orange-ink underline decoration-orange/40 underline-offset-2 hover:decoration-orange"
+                        >
+                          {k.link.text}
+                        </a>
+                        {after}
+                      </>
+                    );
+                  })()
+                : k.body}
+            </p>
           </div>
         ))}
       </div>
