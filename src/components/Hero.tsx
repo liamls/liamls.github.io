@@ -6,7 +6,7 @@ function HeroBase() {
     <section className="pb-10 pt-[52px] menu:pb-[60px] menu:pt-[84px]">
       <div className="inline-flex animate-riseIn [animation-delay:.05s] items-center gap-2.5 rounded-full border border-line bg-surface px-3.5 py-[7px] font-mono text-[12.5px] font-medium text-muted">
         <span className="h-2 w-2 rounded-full bg-orange" />
-        React · TypeScript · Paris
+        Paris, France
       </div>
 
       <h1 className="m-0 mt-6 font-display text-[clamp(40px,6.6vw,78px)] font-extrabold leading-[1.02] tracking-[-.035em]">
