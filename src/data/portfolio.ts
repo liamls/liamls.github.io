@@ -91,7 +91,7 @@ export const experiences: Experience[] = [
     role: 'Développeur front-end',
     meta: 'Juin 2025 - aujourd’hui · CDI · Paris',
     bullets: [
-      'Développement du tunnel d’achat en React et Next.js (codes promo, achats groupés entreprises, paiement CPF), du cadrage produit à la mise en prod.',
+      'Développement du tunnel d’achat en React et Next.js (codes promo, achats groupés entreprises, paiement via le compte CPF), du cadrage produit à la mise en production.',
       'Conception du parcours de connexion SSO Keycloak avec les équipes juridiques et communication, sur un site de 2 millions de comptes.',
       'Maintenance de Richie et Joanie (open source) : revues de code, choix techniques, intégration de scans de vulnérabilités.',
       'Animation d’ateliers et formation de quatre contributeurs externes sur un environnement de démo dédié.',
@@ -112,7 +112,7 @@ export const experiences: Experience[] = [
     role: 'Ingénieur logiciel',
     meta: 'Sept. 2020 - Sept. 2023 · Alternance · Rennes',
     bullets: [
-      'Refonte d’une application interne (front Vue / Nuxt, back Java Spring) et livraison d’un portail de démo pour le projet de fin d’études.',
+      'Refonte d’une application interne (front Vue / Nuxt, back Java Spring) et livraison d’un portail de démonstration pour le projet de fin d’études.',
       'Projet Malima (IoT, cartes SIM) : travail quotidien en anglais et animation des rituels agiles.',
       'Migration de pipelines Jenkins et mise en place du monitoring Grafana.',
     ],
