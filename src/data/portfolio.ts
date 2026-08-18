@@ -73,7 +73,6 @@ export const nav: NavLink[] = [
   { label: 'Projets', href: '#projets' },
   { label: 'Compétences', href: '#stack' },
   { label: 'Formations', href: '#formation' },
-  { label: 'Contact', href: '#contact' },
 ];
 
 export const keypoints: KeyPoint[] = [
