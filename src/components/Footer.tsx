@@ -26,7 +26,7 @@ function FooterBase() {
     <footer className="relative z-[1] border-t border-line bg-surface">
       <div className="mx-auto flex max-w-[1140px] flex-wrap items-center justify-between gap-[18px] px-[18px] py-[34px] menu:px-[26px]">
         <span className="font-display text-[15px] font-bold tracking-[-.01em] text-text">
-          Liam Le Strat — Développeur front-end
+          Liam Le Strat - Développeur front-end
         </span>
         <div className="flex flex-wrap gap-2">
           {socials.map((s) => (

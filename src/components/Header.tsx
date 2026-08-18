@@ -26,7 +26,7 @@ function HeaderBase({ theme, onToggleTheme }: Props) {
       <div className="mx-auto flex max-w-[1140px] items-center justify-between gap-4 px-[18px] py-3.5 menu:px-[26px]">
         <a
           href="#top"
-          aria-label="Liam Le Strat — accueil"
+          aria-label="Liam Le Strat - accueil"
           className="inline-flex items-center gap-2.5 text-text no-underline transition-opacity hover:opacity-65"
         >
           <span className="h-[9px] w-[9px] rotate-45 bg-orange" />

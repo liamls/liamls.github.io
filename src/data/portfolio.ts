@@ -90,7 +90,7 @@ export const experiences: Experience[] = [
   {
     company: 'France Université Numérique',
     role: 'Développeur front-end',
-    meta: 'Juin 2025 — aujourd’hui · CDI · Paris',
+    meta: 'Juin 2025 - aujourd’hui · CDI · Paris',
     bullets: [
       'Développement du tunnel d’achat en React et Next.js (codes promo, achats groupés entreprises, paiement CPF), du cadrage produit à la mise en prod.',
       'Conception du parcours de connexion SSO Keycloak avec les équipes juridiques et communication, sur un site de 2 millions de comptes.',
@@ -101,7 +101,7 @@ export const experiences: Experience[] = [
   {
     company: 'INSEE',
     role: 'Développeur full stack',
-    meta: 'Nov. 2023 — Mai 2025 · Contractuel · Montrouge',
+    meta: 'Nov. 2023 - Mai 2025 · Contractuel · Montrouge',
     bullets: [
       'Melodi (Open Data) : application React sur micro-services Java / Spring, optimisation des performances sur gros volumes et POC SEO.',
       'Responsable applicatif du 3e outil le plus consulté de l’INSEE : évolutions, correctifs de sécurité et automatisation des livraisons.',
@@ -111,7 +111,7 @@ export const experiences: Experience[] = [
   {
     company: 'Orange Business',
     role: 'Ingénieur logiciel',
-    meta: 'Sept. 2020 — Sept. 2023 · Alternance · Rennes',
+    meta: 'Sept. 2020 - Sept. 2023 · Alternance · Rennes',
     bullets: [
       'Refonte d’une application interne (front Vue / Nuxt, back Java Spring) et livraison d’un portail de démo pour le projet de fin d’études.',
       'Projet Malima (IoT, cartes SIM) : travail quotidien en anglais et animation des rituels agiles.',
@@ -123,7 +123,7 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   { title: 'Richie', image: funLogo, badge: 'Catalogue', tone: 'blue', body: 'Portail public d’une plateforme de formation : revue de code, développement de fonctionnalités et arbitrage des contributions.', stack: ['React', 'TypeScript', 'Django CMS'], href: 'https://github.com/openfun/richie' },
   { title: 'Joanie', image: funLogo, badge: 'Back-office', tone: 'purple', body: 'Back-office des commandes et certificats : développement front-end et intégration API.', stack: ['Next.js', 'TypeScript', 'Django'], href: 'https://github.com/openfun/joanie' },
-  { title: 'Liam House', image: liamHouse, badge: 'Creative 3D', tone: 'orange', body: 'Scène interactive 3D conçue lors du Three.js Journey — 4e au concours de la communauté.', stack: ['React', 'Three.js', 'Blender'], href: 'https://liam-house-threejs.vercel.app/' },
+  { title: 'Liam House', image: liamHouse, badge: 'Creative 3D', tone: 'orange', body: 'Scène interactive 3D conçue lors du Three.js Journey - 4e au concours de la communauté.', stack: ['React', 'Three.js', 'Blender'], href: 'https://liam-house-threejs.vercel.app/' },
   { title: 'Pokecard', image: pokecard, badge: 'Jeu', tone: 'pink', body: 'Simulateur d’ouverture de boosters dans le navigateur : animations de tirage et effets de brillance.', stack: ['React', 'CSS', 'Animation'], href: 'https://pokecard-tau.vercel.app/' },
   { title: 'Mikha Prod', image: mikhaProd, badge: 'Site vitrine', tone: 'green', body: 'Site vitrine d’un vidéaste indépendant, de la définition du besoin à la mise en ligne.', stack: ['React', 'Cadrage & écoute client', 'SEO'], href: 'https://mikhaprod.com/' },
   { title: 'Ce portfolio', image: cePortfolio, badge: 'Ce site', tone: 'cyan', body: 'Le site que vous parcourez : thème clair/sombre, curseur interactif, halos réactifs et accessibilité RGAA.', stack: ['React', 'TypeScript', 'Design UI/UX'] },
@@ -182,7 +182,7 @@ export const stackGroups: StackGroup[] = [
 export const diplomas: Diploma[] = [
   { title: 'Ingénieur informatique & télécoms', place: 'IMT Nord Europe', meta: 'Apprentissage · 2020–2023' },
   { title: 'DUT Réseaux & Télécoms', place: 'IUT de Saint-Malo', meta: 'Apprentissage · 2018–2020' },
-  { title: 'Baccalauréat S — mention bien', place: 'Lycée Émile Zola, Rennes', meta: '2015–2018' },
+  { title: 'Baccalauréat S - mention bien', place: 'Lycée Émile Zola, Rennes', meta: '2015–2018' },
 ];
 
 export const languages: Language[] = [
@@ -192,8 +192,8 @@ export const languages: Language[] = [
 ];
 
 export const persoFormations: Formation[] = [
-  { title: 'Three.js Journey', body: 'Bruno Simon, en cours — 3D temps réel : WebGL, shaders, optimisation.' },
-  { title: 'Pentest web niveau 1', body: 'TryHackMe, en cours — sécurité web côté attaquant.' },
+  { title: 'Three.js Journey', body: 'Bruno Simon, en cours - 3D temps réel : WebGL, shaders, optimisation.' },
+  { title: 'Pentest web niveau 1', body: 'TryHackMe, en cours - sécurité web côté attaquant.' },
 ];
 
 export const socials: Social[] = [
