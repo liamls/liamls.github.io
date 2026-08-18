@@ -7,7 +7,7 @@ const columnLabel = 'm-0 font-display text-sm font-bold uppercase tracking-[.06e
 function EducationBase() {
   return (
     <section id="formation" className="scroll-mt-24 border-t border-line pb-14 pt-9 menu:pb-14 menu:pt-11">
-      <SectionHeading index="04 / formations">Formations &amp; langues.</SectionHeading>
+      <SectionHeading index="04 / formations">Formations &amp; langues</SectionHeading>
 
       <div className="grid grid-cols-1 items-start gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <div className="flex flex-col gap-3.5">

@@ -29,7 +29,7 @@ const cardClass =
 function ProjectsBase() {
   return (
     <section id="projets" className="scroll-mt-24 border-t border-line pb-14 pt-9 menu:pb-14 menu:pt-11">
-      <SectionHeading index="02 / projets">Créations &amp; expérimentations.</SectionHeading>
+      <SectionHeading index="02 / projets">Créations &amp; expérimentations</SectionHeading>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((p) => {

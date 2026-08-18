@@ -7,7 +7,7 @@ function ExperienceBase() {
 
   return (
     <section id="experience" className="scroll-mt-24 border-t border-line pb-14 pt-9 menu:pb-14 menu:pt-11">
-      <SectionHeading index="01 / expérience">Parcours professionnel.</SectionHeading>
+      <SectionHeading index="01 / expérience">Parcours professionnel</SectionHeading>
 
       <div className="flex flex-col">
         {experiences.map((x, i) => {

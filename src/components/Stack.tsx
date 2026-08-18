@@ -5,7 +5,7 @@ import { SectionHeading } from '@/components/SectionHeading';
 function StackBase() {
   return (
     <section id="stack" className="scroll-mt-24 border-t border-line pb-14 pt-9 menu:pb-14 menu:pt-11">
-      <SectionHeading index="03 / compétences">Stack technique.</SectionHeading>
+      <SectionHeading index="03 / compétences">Stack technique</SectionHeading>
 
       <div className="grid grid-cols-1 gap-[18px] sm:grid-cols-2 lg:grid-cols-4">
         {stackGroups.map((g) => (
