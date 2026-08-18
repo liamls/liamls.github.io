@@ -22,7 +22,7 @@ function CustomCursorBase({ glow, dot }: Refs) {
       <div
         ref={dot}
         className="cc-cursor pointer-events-none fixed left-0 top-0 z-[9999] h-[15px] w-[15px] [will-change:transform]"
-        style={{ transition: 'transform .12s ease, opacity .13s ease' }}
+        style={{ transition: 'opacity .13s ease' }}
         aria-hidden
       >
         <span className="absolute left-1/2 top-0 h-1.5 w-[1.5px] -translate-x-1/2 rounded-[1px] bg-text shadow-[0_0_0_.5px_var(--bg)]" />
